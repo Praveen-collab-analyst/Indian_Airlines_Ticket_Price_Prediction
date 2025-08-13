@@ -99,9 +99,10 @@ loaded_model.predict([[3,2,4,2,0,5,1,2.17,1]])
 
 ## Files
 
-- `Flyhigh.ipynb`: Main notebook with full workflow.
-- `Clean_Dataset.csv`: Raw dataset.
-- `Indian_Airlines_cleaned_data.csv`: Cleaned and encoded dataset.
+- `Flight.ipynb`: notebook with full workflow.
+- `Airlines-ticket-price-prediction.ipynb`: notebook with full workflow.
+- `Cleaned_Dataset.csv`: Raw dataset.
+- `Cleaned_Dataset.csv`: Cleaned and encoded dataset.
 - `rf-cyber.pkl`: **Not included** (see note above).
 
 ---
