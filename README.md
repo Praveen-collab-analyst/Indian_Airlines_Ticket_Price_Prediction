@@ -47,19 +47,12 @@ This repository contains a complete workflow for predicting airline ticket price
 ## Workflow
 
 1. **Import Libraries**
-   - All necessary libraries for data manipulation, visualization, and machine learning.
 2. **Load Dataset**
-   - Reads `Clean_Dataset.csv` for analysis.
 3. **EDA & Visualization**
-   - Explore data distributions and relationships.
 4. **Preprocessing**
-   - Handle missing values, duplicates, and encode categorical features.
 5. **Feature Selection**
-   - Drop irrelevant columns and prepare data for modeling.
 6. **Model Training**
-   - Split data, train Random Forest model, and evaluate.
 7. **Model Saving & Loading**
-   - Save trained model as `rf-cyber.pkl` and demonstrate loading for predictions.
 
 ---
 
@@ -74,9 +67,10 @@ This repository contains a complete workflow for predicting airline ticket price
 
 ## Saving and Loading the Model
 
-> **Note:**  
-> The `.pkl` file (`rf-cyber.pkl`) generated for the trained Random Forest model can be quite large due to the number of trees and depth.  
-> If you encounter issues uploading or downloading the file from GitHub, consider compressing it or using cloud storage.
+> **Special Note:**  
+> The trained Random Forest model (`rf-cyber.pkl`) can be very large and may exceed GitHub's upload limits.  
+> **The `.pkl` file is NOT included in this repository.**  
+> To use the model, you must generate and save it yourself by running the notebook.
 
 **To save the model from your notebook:**
 ```python
@@ -108,15 +102,15 @@ loaded_model.predict([[3,2,4,2,0,5,1,2.17,1]])
 - `Flyhigh.ipynb`: Main notebook with full workflow.
 - `Clean_Dataset.csv`: Raw dataset.
 - `Indian_Airlines_cleaned_data.csv`: Cleaned and encoded dataset.
-- `rf-cyber.pkl`: Saved Random Forest model (large file, see note above).
+- `rf-cyber.pkl`: **Not included** (see note above).
 
 ---
 
 ## Contact
 
-For questions or collaboration, feel free to reach out on my personal website: https://datatrendx.com/ and GMail: praveen11x@gmail.com
+For questions or collaboration, feel free to reach out via personal website: https://datatrendx.com/ or Gmail: praveen11x@gmail.com.
 
 ---
 
 **Disclaimer:**  
-This project is for educational and demonstration purposes. For production use, further validation and optimization are
+This project is for educational and demonstration purposes. For production use, further validation and optimization
