@@ -2,9 +2,13 @@
 
 Predict airline ticket prices using machine learning and data analytics.
 
+---
+
 ## Overview
 
-This project leverages Python and machine learning to analyze and predict airline ticket prices based on various flight features. The workflow includes data exploration, visualization, preprocessing, feature engineering, model training, evaluation, and deployment.
+This repository contains a complete workflow for predicting airline ticket prices using Python and machine learning. The project covers data exploration, visualization, preprocessing, feature engineering, model training, evaluation, and deployment.
+
+---
 
 ## Features
 
@@ -26,6 +30,8 @@ This project leverages Python and machine learning to analyze and predict airlin
   - Model serialization with pickle for production use.
   - Example of loading and making predictions with the saved model.
 
+---
+
 ## Tech Stack
 
 - Python
@@ -35,6 +41,8 @@ This project leverages Python and machine learning to analyze and predict airlin
 - seaborn
 - scikit-learn
 - Jupyter Notebook
+
+---
 
 ## Workflow
 
@@ -53,38 +61,62 @@ This project leverages Python and machine learning to analyze and predict airlin
 7. **Model Saving & Loading**
    - Save trained model as `rf-cyber.pkl` and demonstrate loading for predictions.
 
+---
+
 ## Usage
 
-1. Clone the repository.
-2. Place your dataset (`Clean_Dataset.csv`) in the root directory.
-3. Run `Flyhigh.ipynb` in Jupyter Notebook.
-4. Follow the notebook cells for EDA, preprocessing, modeling, and prediction.
+1. **Clone the repository.**
+2. **Place your dataset (`Clean_Dataset.csv`) in the root directory.**
+3. **Run `Flyhigh.ipynb` in Jupyter Notebook.**
+4. **Follow the notebook cells for EDA, preprocessing, modeling, and prediction.**
 
-## Example Prediction
+---
 
-After training and saving the model, you can load it and predict ticket prices for new data:
+## Saving and Loading the Model
 
+> **Note:**  
+> The `.pkl` file (`rf-cyber.pkl`) generated for the trained Random Forest model can be quite large due to the number of trees and depth.  
+> If you encounter issues uploading or downloading the file from GitHub, consider compressing it or using cloud storage.
+
+**To save the model from your notebook:**
 ```python
 import pickle
-loaded_model = pickle.load(open('rf-cyber.pkl', 'rb'))
-# Example input: [airline, source_city, departure_time, stops, arrival_time, destination_city, class, duration, days_left]
-prediction = loaded_model.predict([[3,2,4,2,0,5,1,2.17,1]])
-print("Predicted Price:", prediction)
+model = rf  # Your trained RandomForestRegressor object
+file_path = 'rf-cyber.pkl'
+with open(file_path, 'wb') as file:
+    pickle.dump(model, file)
 ```
+
+**To load the model for prediction:**
+```python
+import pickle
+file_path = 'rf-cyber.pkl'
+with open(file_path, 'rb') as file:
+    loaded_model = pickle.load(file)
+```
+
+**Example prediction:**
+```python
+# Replace the values below with your feature set
+loaded_model.predict([[3,2,4,2,0,5,1,2.17,1]])
+```
+
+---
 
 ## Files
 
 - `Flyhigh.ipynb`: Main notebook with full workflow.
 - `Clean_Dataset.csv`: Raw dataset.
 - `Indian_Airlines_cleaned_data.csv`: Cleaned and encoded dataset.
-- `rf-cyber.pkl`: Saved Random Forest model.
-
-## Contact
-
-For questions or collaboration, feel free to reach out.
-Personal Website: https://datatrendx.com/
-Email: praveen11x@gmail.com
+- `rf-cyber.pkl`: Saved Random Forest model (large file, see note above).
 
 ---
 
-**Note:** This project is for educational and demonstration purposes. For production use, further validation and optimization are recommended.
+## Contact
+
+For questions or collaboration, feel free to reach out on my personal website: https://datatrendx.com/ and GMail: praveen11x@gmail.com
+
+---
+
+**Disclaimer:**  
+This project is for educational and demonstration purposes. For production use, further validation and optimization are
