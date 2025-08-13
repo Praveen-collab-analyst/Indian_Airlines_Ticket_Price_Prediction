@@ -1,4 +1,4 @@
-# Flycheap Airlines Ticket Price Prediction
+# Indian Airlines Ticket Price Prediction
 
 Predict airline ticket prices using machine learning and data analytics.
 
